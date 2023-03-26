@@ -1,0 +1,67 @@
+.testButton {
+  background-color: var(--button-default-background-color);
+  border: none;
+  margin: 0 5px 0 5px;
+}
+
+.layout {
+  background-color: white;
+  margin-left: 25vw;
+  height: 100%;
+}
+.layoutNoFuzzers {
+  background-color: white;
+}
+
+.fuzzerHeader {
+  background-color: white;
+  text-align: left;
+  font-size: large;
+  line-height: 30px;
+  min-height: 160px;
+  padding: 0 24px;
+  min-width: 1020px;
+}
+.contentHeader {
+  background-color: white;
+  min-height: 168px;
+  padding: 20px;
+  text-align: left;
+}
+
+.fuzzerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  height: 40px;
+}
+
+.contentContainer {
+  min-height: 75vh;
+  background-color: var(--content-back-color);
+}
+
+.fuzzerActions {
+  display: flex;
+  min-width: 150px;
+  max-width: 400px;
+  justify-content: space-between;
+}
+
+.pageDescription {
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  margin-top: 8px;
+}
+
+.tabContainer {
+  margin: 24px;
+}

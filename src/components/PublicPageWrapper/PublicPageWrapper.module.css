@@ -1,0 +1,30 @@
+/* 
+if used x-scroll appears
+.containerPage {
+  width: 100vw;
+} */
+
+.containerBack {
+  background-color: white;
+  height: var(--height-full);
+  max-width: var(--ratio-big-width);
+}
+
+.containerForm {
+  background-color: var(--login-wrapper-form-color);
+  height: var(--height-full);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}

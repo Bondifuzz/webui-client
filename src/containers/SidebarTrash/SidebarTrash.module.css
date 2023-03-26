@@ -1,0 +1,58 @@
+.container {
+  background-color: var(--sidebar-bckgd);
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  padding-top: var(--padd-vert-from-navbar);
+}
+
+.pageTitle span {
+  color: white;
+}
+
+.TableContainer {
+  margin: var(--marg-side-24);
+}
+
+.TableContainer tr:hover > td {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.TableContainerWrapped tbody {
+  background-color: var(--sidebar-bckgd);
+}
+
+.TableContainer tr th {
+  background-color: transparent !important;
+  color: var(--form-insides-grey);
+  border: none;
+  box-shadow: none;
+}
+
+.TableContainer tr td {
+  border: none;
+  /* for sorted column no to have ant color */
+  background-color: transparent;
+}
+
+.TableRowActive {
+  background-color: var(--button-primary-background-color);
+}
+
+.inputContainer span {
+  background-color: var(--sidebar-bckgd-dark) !important;
+  border: none;
+  color: var(--form-insides-grey);
+}
+
+.inputContainer span > input {
+  color: var(--form-insides-grey);
+}
+
+.selectList {
+  background-color: var(--sidebar-bckgd-dark);
+}
+
+.selectItem:hover {
+  background-color: var(--sidebar-bckgd);
+}

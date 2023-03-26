@@ -1,0 +1,638 @@
+{
+  "modal": {
+    "button": {
+      "move_to_trash": "Переместить в корзину",
+      "delete_permanently": "Удалить навсегда",
+      "cancel": "Отменить",
+      "fuzzer_erase_ok": "Да, удалить фаззер",
+      "version_erase_ok": "Да, удалить версию",
+      "project_erase_ok": "Да, удалить проект",
+      "project_rename_and_restore": "Переименовать и восстановить проект",
+      "fuzzer_rename_and_restore": "Переименовать и восстановить фаззер",
+      "version_rename_and_restore": "Переименовать и восстановить версию",
+      "user_bin_empty_ok": "Да, очистить корзину",
+      "project_bin_empty_ok": "Да, очистить корзину проекта",
+      "fuzzer_cleanup_ok": "Да, очистить фаззер"
+    },
+    "title": {
+      "choose_one_option": "Выберите опцию:",
+      "name_occupied": "Это имя уже занято"
+    },
+    "warning": {
+      "fuzzer_erased": "<strong>Этот фаззер и все его версии будут удалены навсегда</strong> без возможности восстановления.",
+      "confirmation_to_procced": "Хотите продолжить?",
+      "version_erased": "Эта версия<strong> будет удалена навсегда</strong> без возможности восстановления.",
+      "project_erased": "<strong>Этот проект и все его фаззеры</strong>, версии и связанные настройки <strong> будут удалены навсегда</strong> без возможности восстановления.",
+      "integration_erased": "<strong>Эта интеграция и все её настройки будут удалены навсегда</strong> без возможности восстановления.",
+      "user_bin_empty": "<strong>Все проекты, фаззеры и версии, находящиеся в корзине,</strong> и связанные с ними настройки <strong> будут удалены навсегда</strong> без возможности восстановления.",
+      "project_bin_empty": "Фаззеры и версии текущего проекта, находящиеся в корзине,<strong> будут удалены навсегда</strong> без возможности восстановления.",
+      "fuzzer_cleanup_with_fuzzer": "<strong>Этот фаззер и все его версии будут удалены навсегда</strong> без возможности восстановления.",
+      "fuzzer_cleanup_without_fuzzer": "Фаззеры, находящиеся в корзине,<strong> будут удалены навсегда</strong> без возможности восстановления."
+    },
+    "content": {
+      "project_new_name": "Введите новое имя, с которым этот проект будет восстановлен",
+      "fuzzer_new_name": "Введите новое имя, с которым этот фаззер будет восстановлен",
+      "version_new_name": "Введите новое имя, с которым эта версия будет восстановленна"
+    },
+    "placeholder": {
+      "project_new_name": "Новое название проекта",
+      "new_name": "Новое название"
+    }
+  },
+  "form": {
+    "label": {
+      "version": {
+        "cpu_usage": "Использование CPU",
+        "ram_usage": "Использование RAM",
+        "tmpfs_size": "Размер tmpfs",
+        "image": "Образ",
+        "name": "Название версии",
+        "description": "Описание"
+      },
+      "fuzzer": {
+        "name": "Имя фаззера",
+        "description": "Описание",
+        "language": "Язык",
+        "engine": "Движок"
+      },
+      "project": {
+        "name": "Название проекта",
+        "description": "Описание",
+        "node_count": "Ноды",
+        "node_cpu": "Использование CPU",
+        "node_ram": "Использование RAM",
+        "pool": "Пул"
+      },
+      "integration": {
+        "type": "Тип интеграции",
+        "name": "Название интеграции",
+        "project_name": "Проект",
+        "url": "Добавить ссылку",
+        "sign_in_bug_tracker": "Войти в баг-трекер",
+        "issue_type": "Тип задачи",
+        "priority": "Приоритет",
+        "token": "Токен"
+      },
+      "auth": {
+        "login": "Введите логин",
+        "password": "Введите пароль"
+      },
+      "user": {
+        "login": "Логин",
+        "display_name": "Имя",
+        "email": "Email",
+        "current_password": "Текущий пароль",
+        "new_password_original": "Новый пароль",
+        "new_password_confirmation": "Подтвердить новый пароль"
+      }
+    },
+    "hint": {
+      "fuzzer": {
+        "name": "Пожалуйста, введите имя фаззера!",
+        "description": "До 160 символов",
+        "image": "Пожалуйста, выберите образ!"
+      },
+      "version": {
+        "upload_binaries": "Пожалуйста, загрузите бинарники!",
+        "name": "Пожалуйста, введите название версии!",
+        "description": "До 160 символов",
+        "image": "Пожалуйста, выберите образ!",
+        "ram_total_limits_violated": "Сумма ресурсов tmpfs и RAM не должна выходить за пределы диапазона {{ramMin}}-{{ramMax}} MiB"
+      },
+      "project": {
+        "name": "Пожалуйста, введите название проекта!",
+        "description": "До 160 символов",
+        "creation_disabled": "Обновите ваш аккаунт, чтобы продолжить",
+        "pool": "Пожалуйста, выберите пул!"
+      },
+      "integration": {
+        "name": "Пожалуйста, введите название интеграции!",
+        "project_name": "Пожалуйста, введите название проекта!",
+        "url": "Добавьте ссылку!",
+        "username": "Введите ваше имя пользователя!",
+        "password": "Введите ваш пароль!",
+        "issue_type": "Выберите тип задачи!",
+        "token": "Введите токен!"
+      },
+      "auth": {
+        "login": "Введите ваш логин!",
+        "password": "Введите ваш пароль!"
+      },
+      "user": {
+        "password": "Введите ваш пароль!",
+        "new_password_confirmation": "Подтвердите ваш пароль!"
+      }
+    },
+    "placeholder": {
+      "fuzzer": {
+        "name": "Имя фаззера",
+        "description": "Добавьте описание (до 160 символов)"
+      },
+      "project": {
+        "name": "Название проекта",
+        "description": "Добавьте описание (до 160 символов)"
+      },
+      "integration": {
+        "url": "URL",
+        "username": "Логин",
+        "password": "Пароль",
+        "issue_type": "Тип",
+        "priority": "Приоритет",
+        "token": "Токен"
+      },
+      "version": {
+        "description": "Добавьте описание (до 160 символов)",
+        "description_default": "Первая версия фаззера {{newFuzzerId}}"
+      },
+      "auth": {
+        "login": "Логин",
+        "password": "Пароль"
+      },
+      "user": {
+        "login": "Логин",
+        "email": "Email",
+        "current_password": "Текущий пароль",
+        "new_password_original": "Новый пароль",
+        "new_password_confirmation": "Подтвердите новый пароль"
+      }
+    },
+    "button": {
+      "version": {
+        "upload_binaries": "Загрузите бинарники (.tar.gz)",
+        "upload_config": "Загрузите опции и окружение (.json)",
+        "upload_seeds": "Загрузите сиды (.tar.gz)",
+        "version_create": "Создать версию",
+        "save_changes": "Сохранить изменения"
+      },
+      "fuzzer": {
+        "fuzzer_create": "Создать фаззер",
+        "save_changes": "Сохранить изменения"
+      },
+      "project": {
+        "project_create": "Создать проект",
+        "save_changes": "Сохранить изменения"
+      },
+      "integration": {
+        "integration_create": "Создать интеграцию",
+        "delete": "Удалить интеграцию",
+        "save_changes": "Сохранить изменения",
+        "select_type": {
+          "jira": "Jira",
+          "youtrack": "Youtrack",
+          "none": "Без интеграции"
+        }
+      },
+      "auth": {
+        "log_in": "Войти"
+      },
+      "user": {
+        "toggle_password_reset": "Восстановить пароль",
+        "save_changes": "Сохранить"
+      }
+    },
+    "title": {
+      "fuzzer_create": "Создать новый фаззер",
+      "version_create": "Создать новую версию",
+      "fuzzer_edit": "Изменить фаззер",
+      "version_edit": "Изменить версию",
+      "log_in": "Войти",
+      "project_create": "Создать новый проект",
+      "project_edit": "Изменить проект",
+      "user_settings": "Настройки аккаунта",
+      "integration_create": "Создать новую интеграцию",
+      "integration_edit": "Изменить интеграцию"
+    }
+  },
+  "projects": {
+    "tab_name": {
+      "project_settings": "Проект",
+      "integration_settings": "Интеграция",
+      "projects_active": "Активные",
+      "projects_deleted": "Удаленные"
+    },
+    "button": {
+      "header_add_project": "+ Добавить новый проект",
+      "header_add_fuzzer": "+ Добавить фаззер",
+      "header_add_integration": "+ Добавить интеграцию",
+      "create_project": "Создать новый проект",
+      "create_fuzzer": "Создать новый фаззер",
+      "add_integration": "+ Добавить интеграцию",
+      "user_bin_empty": "Очистить корзину пользователя",
+      "project_edit": "Изменить",
+      "project_delete": "Удалить",
+      "project_restore": "Восстановить",
+      "project_erase": "Удалить",
+      "to_integrations": "Интеграции",
+      "deselect_all": "Отменить выбор"
+    },
+    "column_title": {
+      "name_project": "Проект",
+      "name_fuzzer": "Фаззер",
+      "nodes": "Ноды",
+      "name_integration": "Интеграции",
+      "status": "Статус",
+      "state": "Состояние",
+      "coverage": "Покрытие",
+      "cpu": "CPU",
+      "ram": "RAM",
+      "images": "Образы",
+      "lang": "Язык",
+      "engine": "Движок",
+      "selected_items": "Выбраны:",
+      "type": "Тип"
+    },
+    "data_availability_message": {
+      "no_projects_yet": "У вас нет проектов",
+      "no_deleted_projects_yet": "У вас нет удаленных проектов",
+      "no_fuzzers_yet": "У вас нет фаззеров",
+      "no_integrations_yet": "У вас нет интеграций"
+    },
+    "breadcrumb": {
+      "all_projects": "Все проекты",
+      "bin_projects": "Корзина с проектами",
+      "integrations": "Интеграции"
+    },
+    "title": {
+      "all_projects": "Все проекты",
+      "bin_projects": "Корзина с проектами",
+      "project_not_found": "Проект не существует"
+    },
+    "descripton": {
+      "current_project": "Текущий проект:",
+      "descripton": "Описание:"
+    }
+  },
+  "navbar": {
+    "projects": "Проекты",
+    "fuzzers": "Фаззеры",
+    "support": "FAQ",
+    "documentation": "Документация",
+    "trash": "Корзина",
+    "log_out": "Выйти",
+    "settings": "Настройки",
+    "sign_in": "Войти"
+  },
+  "fuzzers": {
+    "data_availability_message": {
+      "no_fuzzers_yet": "Вы еще не загрузили ни одного фаззера",
+      "fuzzer_not_found": "Фаззер не существует"
+    },
+    "button": {
+      "fuzzer_create": "Создать новый фаззер",
+      "fuzzer_delete": "Удалить фаззер",
+      "fuzzer_edit": "Изменить фаззер",
+      "fuzzer_download": "Загрузить",
+      "download_corpus": "Корпус",
+      "download_binaries": "Бинарники",
+      "download_config": "Опции и окружение",
+      "download_seeds": "Сиды",
+      "add_version": "+ Добавить версию"
+    },
+    "filters": {
+      "label": {
+        "version_name": "Название версии",
+        "date": "Период",
+        "reproduced_all": "Все",
+        "reproduced_yes": "Воспроизведено",
+        "reproduced_no": "Не воспроизведено",
+        "archived_yes": "Архивные",
+        "archived_no": "Активные"
+      },
+      "placeholder": {
+        "all_versions": "Все версии",
+        "search_version": "Поиск по названию версии"
+      }
+    },
+    "active_version": "Активная версия:",
+    "description": "Описание:",
+    "tab_error": {
+      "title": "Что-то пошло не так",
+      "contact_support": "Пожалуйста, обратитесь в поддержку <1>{{supportEmail}}</1>"
+    },
+    "tab_name": {
+      "versions": "Версии",
+      "crashes": "Крэши",
+      "statistics": "Статистика"
+    },
+    "crashes_tab": {
+      "data_availability_message": {
+        "no_crashes_yet": "У фаззера пока нет крэшей"
+      },
+      "adjust_filter": "Пожалуйста, измените фильтр",
+      "duplicates_one": "{{count}} дубликат",
+      "duplicates_few": "{{count}} дубликатов",
+      "duplicates_many": "{{count}} дубликатов",
+      "duplicates_other": "{{count}} дубликатов",
+      "button": {
+        "crash_archive": "Архивировать",
+        "crash_unarchive": "Разархивировать",
+        "crash_copy": "Копировать",
+        "crash_download": "Загрузить"
+      }
+    },
+    "statistics_tab": {
+      "data_availability_message": {
+        "no_statistics_yet": "У фаззера еще нет статистики"
+      },
+      "chart_name": {
+        "execs_done": "Количество выполнений",
+        "execs_per_sec": "Выполнений в секунду",
+        "known_crashes": "Известные крэши",
+        "unique_crashes": "Уникальные крэши"
+      },
+      "adjust_filter": "Пожалуйста, выберите другую версию"
+    },
+    "versions_tab": {
+      "data_availability_message": {
+        "no_versions_yet": "У фаззера еще нет версий"
+      },
+      "column_title": {
+        "name": "Название",
+        "status": "Статус",
+        "state": "Состояние",
+        "description": "Описание",
+        "actions": "Действия",
+        "cpu": "CPU",
+        "ram": "RAM"
+      },
+      "button": {
+        "version_start_disabled_noBinaries": "Бинарники не загружены.",
+        "version_start_disabled_fuzzerFailure": "Ошибка в работе, попробуйте перезапустить.",
+        "fuzzer_start_disabled_noActiveVersion": "У фаззера нет активной версии",
+        "version_restart_disabled_noBinaries": "Бинарники не загружены.",
+        "version_restart_disabled_beforeVerification": "Рестарт недоступен до проверки.",
+        "fuzzer_restart_disabled_noActiveVersion": "У фаззера нет активной версии",
+        "version_start": "Запустить",
+        "version_stop": "Остановить",
+        "version_restart": "Перезапустить",
+        "version_edit": "Изменить",
+        "version_delete": "Удалить"
+      },
+      "state": {
+        "Ok": "ОК",
+        "Warning": "Предупреждение",
+        "Error": "Ошибка"
+      },
+      "status": {
+        "Unverified": "Не проверена",
+        "Verifying": "Проверяется",
+        "Running": "Исполняется",
+        "Stopped": "Остановлена",
+        "Interrupted": "Прервана"
+      }
+    }
+  },
+  "sidebar": {
+    "current_project": {
+      "title": "Проект: <strong>{{userProjectName}}</strong>",
+      "tooltip": "К проектам"
+    },
+    "button": {
+      "hide": "Скрыть",
+      "expand": "Все фильтры",
+      "add_fuzzer": "+ Фаззер",
+      "reset_filters": "Сбросить фильтры"
+    },
+    "label": {
+      "lang": "Язык",
+      "engine": "Движок",
+      "ci_integration": "CI-интеграция"
+    },
+    "column_title": {
+      "name": "Название",
+      "ci_integration": "CI-интеграция",
+      "lang": "Язык",
+      "engine": "Движок"
+    },
+    "table_fuzzer_ci_integrated": "Интегрировать",
+    "placeholder": {
+      "search_fuzzer": "Искать по названию фаззера"
+    },
+    "data_availability_message": {
+      "no_deleted_fuzzers": "Нет удаленных фаззеров"
+    }
+  },
+  "error": {
+    "common": "Что-то пошло не так",
+    "form_validation": {
+      "passwords_mismatch": "Введенные вами пароли не совпадают!"
+    },
+    "instruction": {
+      "relogin": "Попробуйте войти в приложение снова",
+      "choose_another_project": "Пожалуйста, выберите другой проект"
+    },
+    "api_error": {
+      "E_INTERNAL_ERROR": "Что-то пошло не так. Пожалуйста, обратитесь в поддержку",
+      "E_WRONG_REQUEST": "Wrong request parameters",
+
+      "E_AUTHORIZATION_REQUIRED": "Требуется авторизация",
+      "E_SESSION_NOT_FOUND": "Ваша сессия истекла",
+      "E_LOGIN_FAILED": "Неудачная попытка входа: Неверное имя пользователя или пароль",
+      "E_ACCESS_DENIED": "В доступе отказано",
+      "E_ADMIN_REQUIRED": "Требуются права администратора",
+      "E_SYSTEM_ADMIN_REQUIRED": "Требуются права системного администратора",
+      "E_CLIENT_ACCOUNT_REQUIRED": "Пожалуйста, используйте клиентский аккаунт для управления данными по этому пути",
+      "E_DEVICE_COOKIE_LOCKOUT": "Аккаунт заблокирован. Пожалуйста, попробуйте позже",
+      "E_DEVICE_COOKIE_INVALID": "Предоставленные куки недействительны",
+
+      "E_CSRF_TOKEN_MISSING": "Предоставленный CSRF токен недействителен или просрочен",
+      "E_CSRF_TOKEN_MISMATCH": "Предоставленный CSRF токен недействителен или просрочен",
+      "E_CSRF_TOKEN_INVALID": "Предоставленный CSRF токен недействителен или просрочен",
+      "E_CSRF_TOKEN_USER_MISMATCH": "Предоставленный CSRF токен недействителен или просрочен",
+      "E_USER_NOT_FOUND": "Запрашиваемый пользователь не существует",
+      "E_USER_EXISTS": "Пользователь с таким именем уже существует",
+      "E_USER_DELETED": "Невозможно совершить операцию, так как пользователь удален",
+      "E_USER_NOT_DELETED": "Невозможно восстановить не удаленного пользователя",
+      "E_ACCOUNT_NOT_CONFIRMED": "Аккаунт не активирован. Пожалуйста, проверьте свою почту/телефон для ссылки с активацией",
+      "E_ACCOUNT_DISABLED": "Аккаунт заблокирован. Пожалуйста, обратитесь в поддержку за информацией",
+      "E_WRONG_PASSWORD": "Пароль неверен",
+
+      "E_PROJECT_NOT_FOUND": "Запрашиваемый проект не существует",
+      "E_PROJECT_EXISTS": "Проект с таким названием уже существует",
+      "E_PROJECT_DELETED": "Невозможно совершить операцию, так как проект удален",
+      "E_PROJECT_NOT_DELETED": "Невозможно восстановить не удаленный проект",
+      "E_POOL_NOT_FOUND": "Пул не найден",
+      "E_POOL_EXISTS": "Пул уже существует",
+      "E_POOL_LOCKED": "Пуд в процессе изменения. Пожалуйста, попробуйте позже",
+      "E_DEFAULT_PROJECT_IMMUTABLE": "Дефолтный проект не может быть изменен или удален",
+      "E_PROJECT_DELETE_ERROR": "Невозможно удалить этот проект",
+      "E_CPU_RAM_MULTIPLICITY_BROKEN": "Количество RAM должно быть кратным числу ядер процессора",
+      "E_NODE_CPU_INVALID": "Недопустимое количество ядер для узла",
+      "E_NODE_RAM_INVALID": "Недопустимое количество памяти для узла",
+      "E_INVALID_MEM_PER_CORE": "Недопустимое соотношение введенных CPU и RAM",
+
+      "E_FUZZER_NOT_FOUND": "Запрашиваемый фаззер не существует",
+      "E_FUZZER_EXISTS": "Фаззер с таким именем уже существует",
+      "E_FUZZER_DELETED": "Невозможно совершить операцию, так как фаззер удален",
+      "E_FUZZER_NOT_DELETED": "Невозможно восстановить не удаленный фаззер",
+      "E_FUZZER_LANG_MISMATCH": "Язык программирования выбранного docker образа отличается от указанного в запросе",
+      "E_FUZZER_ENGINE_MISMATCH": "Движок выбранного docker образа отличается от указанного в запросе",
+      "E_ACTIVE_REVISION_NOT_FOUND": "Активная версия не выбрана",
+
+      "E_REVISION_NOT_FOUND": "Запрашиваемая версия фаззера не существует",
+      "E_REVISION_EXISTS": "Версия фаззера с таким названием уже существует",
+      "E_REVISION_DELETED": "Невозможно совершить операцию, так как версия удалена",
+      "E_REVISION_NOT_DELETED": "Невозможно восстановить не удаленную версию",
+      "E_REVISION_CAN_NOT_BE_CHANGED": "Указанные данные не могут быть изменены в текущем состоянии",
+      "E_REVISION_IS_NOT_RUNNING": "Версия не запущена",
+      "E_REVISION_CAN_ONLY_RESTART": "В текущем состоянии версия может быть только перезапущена",
+      "E_REVISION_ALREADY_RUNNING": "Версия уже запущена",
+      "E_MUST_UPLOAD_BINARIES": "Вам необходимо загрузить бинарники для запуска версии",
+      "E_NO_POOL_TO_USE": "Данный проект не имеет пула. Пожалуйста, создайте его,чтобы продолжить",
+      "E_CPU_USAGE_INVALID": "Недопустимое значение CPU указано для версии. Проверьте, не превышает ли оно лимиты пула",
+      "E_RAM_USAGE_INVALID": "Недопустимое значение RAM указано для версии. Проверьте, не превышает ли оно лимиты пула",
+      "E_TMPFS_SIZE_INVALID": "Недопустимое значение TmpFS указано для версии. Проверьте, не превышает ли оно лимиты пула",
+      "E_TOTAL_RAM_USAGE_INVALID": "Сумма размера TmpFS и используемой RAM превышает лимиты пула",
+      "E_SOURCE_REVISION_NOT_FOUND": "Исходная версия не найдена",
+      "E_TARGET_REVISION_NOT_FOUND": "Конечная версия не найдена",
+      "E_CORPUS_OVERWRITE_FORBIDDEN": "Перезапись файлов корпуса запрещена, если целевая версия запускалась",
+      "E_NO_CORPUS_FOUND": "Файлы корпуса не найдены",
+      "E_COPY_SOURCE_TARGET_SAME": "ID исходной и конечной версий одинаковы",
+
+      "E_IMAGE_NOT_FOUND": "Запрашиваемый образ не существует",
+      "E_IMAGE_EXISTS": "Образ с таким названием уже существует",
+      "E_IMAGE_NOT_READY": "Указанный образ не может быть использован для запуска фаззера",
+      "E_ENGINE_LANG_INCOMPATIBLE": "Данный движок не совместим с указанным языком программирования",
+
+      "E_INTEGRATION_NOT_FOUND": "Запрашиваемая интеграция не существует",
+      "E_INTEGRATION_TYPE_MISMATCH": "Тип интеграции в теле запроса не соответсвует актуальному",
+      "E_INTEGRATION_EXISTS": "Интеграция с таким названием уже существует",
+
+      "E_CRASH_NOT_FOUND": "Запрашиваемый крэш не существует",
+      "E_STATISTICS_NOT_FOUND": "Запрашиваемая статистика не существуетt",
+
+      "E_UPLOAD_FAILURE": "Загрузка файла не прошла. Необходимо загрузить файл снова",
+      "E_FILE_NOT_FOUND": "Запрашиваемого файла не существует",
+      "E_FILE_TOO_LARGE": "Предоставленный файл слишком большой. Пожалуйста, следуйте лимитам по загрузке",
+      "E_FILE_NOT_ARCHIVE": "Предоставленный файл не распознается как архив. ожалуйста, убедитесь, что вы загружаете '.tar.gz' файл",
+      "E_JSON_FILE_IS_INVALID": "Предоставленный файл не распознается как json. Пожалуйста, убедитесь, что вы загружаете правильный файл"
+    },
+    "scheduler_error": {
+      "E_SUCCESS": "Успешно",
+      "E_INTERNAL_ERROR": "Что-то пошло не так. Пожалуйста, обратитесь к администратору",
+      "E_AGENT_ERROR": "Ошибка агента",
+      "E_NOT_ENOUGH_RESOURCES": "В кластере недостаточно ресурсов для запуска фаззера!",
+      "E_NORMAL_WEIGHT": "Производительность фаззера в норме",
+      "E_LOW_WEIGHT": "Внимание: Производительность фаззера низкая!",
+      "E_ZERO_WEIGHT": "Фаззер был остановлен из-за низкой производительности!"
+    },
+    "agent_error": {
+      "E_SUCCESS": "Успешно",
+      "E_INTERNAL_ERROR": "Что-то пошло не так",
+
+      "E_CONFIG_INVALID": "Неверная конфигурация фаззера",
+      "E_FUZZER_ABORTED": "Фаззер прерван",
+      "E_FUZZER_LAUNCH_ERROR": "Ошибка фаззера",
+
+      "E_RAM_LIMIT_EXCEEDED": "Лимит RAM превышен",
+      "E_TMPFS_LIMIT_EXCEEDED": "На tmpfs не осталось места"
+    },
+
+    "internal_server_error": "Что-то пошло не так. Пожалуйста, обратитесь в поддержку"
+  },
+  "notification": {
+    "button": {
+      "cancel": "Отменить"
+    },
+    "message": {
+      "fuzzer_deleted": "Фаззер отправлен в корзину",
+      "fuzzer_erased": "Фаззер удаляется",
+      "version_deleted": "Версия отправлена в корзину",
+      "version_erased": "Версия удаляется",
+      "integration_deleted": "Интеграция удалена",
+      "project_deleted": "Проект отправлен в корзину",
+      "project_erased": "Проект удаляется",
+      "project_restored": "Проект восстанавливается",
+      "user_bin_empty": "Корзина пользователя очищается",
+      "fuzzer_restored": "Фаззер восстанавливается",
+      "version_restored": "Версия восстанавливается",
+      "fuzzer_cleanup": "Фаззер очищается",
+      "project_bin_empty": "Корзина проекта очищается",
+      "error": "Что-то пошло не так"
+    },
+    "description": {
+      "fuzzer_deleted": "Фаззер будет храниться в корзине в течение 30 дней",
+      "fuzzer_erased": "Фаззер будет удален навсегда",
+      "version_deleted": "Версия будет храниться в корзине в течение 30 дней",
+      "version_erased": "Версия будет удалена навсегда",
+      "integration_deleted": "Интеграция проекта удалена",
+      "project_deleted": "Проект будет храниться в корзине в течение 30 дней",
+      "project_erased": "Проект будет удален навсегда",
+      "project_restored": "Проект восстановлен из корзины",
+      "user_bin_empty": "Все в корзине проекты и их содержимое будут удалены навсегда",
+      "fuzzer_restored": "Фаззер восстановлен из корзины",
+      "version_restored": "Версия восстановлена из корзины",
+      "fuzzer_cleanup": "Фаззер очищается",
+      "project_bin_empty": "Все фаззеры и их версии будут навсегда удалены из корзины проекта"
+    }
+  },
+  "general": {
+    "navigation_button": {
+      "registration": "Зарегистрироваться",
+      "back_to_previous_page": "На предыдущую страницу",
+      "back_to_support": "Назад к поддержке",
+      "go_to_main_page": "Перейти на главную",
+      "go_to_projects": "Перейти к проектам",
+      "go_to_bin_projects": "Корзина с проектами"
+    },
+    "alert": {
+      "project_creation_disabled": "Обновите ваш аккаунт для новых возможностей. Пожалуйста, обратитесь в поддержку <1>{{supportEmail}}</1> за деталями."
+    },
+    "date_picker": {
+      "today": "Сегодня",
+      "last_week": "Последняя неделя",
+      "last_month": "Последний месяц"
+    }
+  },
+  "support": {
+    "button": {
+      "ask_or_report": "Задайте вопрос или сообщите об ошибке",
+      "ask_again": "Задайте вопрос снова",
+      "send": "Отправить"
+    },
+    "title": {
+      "ask_or_report": "Задайте вопрос или сообщите об ошибке"
+    },
+    "placeholder": {
+      "request_type_select": "Выберите тему",
+      "message_text": "Текст сообщения..."
+    },
+    "request_type": {
+      "request": "Отправить запрос",
+      "question": "Задать вопрос",
+      "problem": "Сообщить о проблеме"
+    },
+    "response_message": {
+      "gratitude": "Спасибо за ваше обращение!",
+      "promise_to_reply": "Скоро мы ответим вам по почте!"
+    }
+  },
+  "trash": {
+    "button": {
+      "version_restore": "Восстановить",
+      "version_erase": "Удалить",
+      "fuzzer_restore": "Восстановить фаззер",
+      "fuzzer_cleanup": "Удалить",
+      "project_bin_empty": "Очистить корзину проекта"
+    },
+    "data_availability_message": {
+      "no_deleted_versions": "Нет удаленных версий"
+    },
+    "placeholder": {
+      "search_version": "Искать по названию версии"
+    }
+  },
+  "not_found": {
+    "title": {
+      "page_not_found": "Такой страницы нет"
+    }
+  },
+  "app_error": {
+    "title": {
+      "error": "Что-то пошло не так. Пожалуйста, обновите страницу"
+    },
+    "button": {
+      "refresh_page": "Обновить страницу"
+    }
+  }
+}

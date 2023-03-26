@@ -1,0 +1,31 @@
+.contentHeader {
+  background-color: white;
+  min-height: 168px;
+  padding: 20px;
+  text-align: left;
+}
+.pageTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  height: 40px;
+}
+.pageDescription {
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  margin-top: 8px;
+}
+.contentContainer {
+  margin-top: 20px;
+}
+
+.projectsAbscenceMessage {
+  font: var(--font-30-38);
+  margin-bottom: 30px;
+}
+
+.panelContainerActive {
+  background-color: var(--content-back-color);
+}

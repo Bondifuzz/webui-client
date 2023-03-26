@@ -1,0 +1,28 @@
+.contentHeader {
+  background-color: white;
+  min-height: 98px;
+  padding: 20px;
+  text-align: left;
+}
+.pageTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  /* to not change line height when button is invisible on loading */
+  height: 40px;
+}
+
+.contentContainer {
+  /* min-height: 75vh; */
+  margin-top: 20px;
+}
+
+.panelContainerActive {
+  background-color: var(--content-back-color);
+  /* height: 56px; */
+}
+.projectsAbscenceMessage {
+  font: var(--font-30-38);
+  margin-bottom: 30px;
+}

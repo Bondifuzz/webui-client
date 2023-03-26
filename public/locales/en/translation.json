@@ -1,0 +1,638 @@
+{
+  "modal": {
+    "button": {
+      "move_to_trash": "Move to Trash",
+      "delete_permanently": "Delete permanently",
+      "cancel": "Cancel",
+      "fuzzer_erase_ok": "Yes, delete fuzzer",
+      "version_erase_ok": "Yes, delete version",
+      "project_erase_ok": "Yes, delete project",
+      "project_rename_and_restore": "Change project name and restore",
+      "fuzzer_rename_and_restore": "Change fuzzer name and restore",
+      "version_rename_and_restore": "Change version name and restore",
+      "user_bin_empty_ok": "Yes, empty user bin",
+      "project_bin_empty_ok": "Yes, empty project bin",
+      "fuzzer_cleanup_ok": "Yes, clean up fuzzer"
+    },
+    "title": {
+      "choose_one_option": "Choose one of the options:",
+      "name_occupied": "This name is already taken."
+    },
+    "warning": {
+      "fuzzer_erased": "<strong>This fuzzer and all its versions will be deleted permanently </strong>without recovery options.",
+      "confirmation_to_procced": "Do you want to proceed?",
+      "version_erased": "This version<strong> will be deleted permanently </strong>without recovery options.",
+      "project_erased": "<strong>This project and all its fuzzers</strong>, versions and all related settings <strong> will be deleted permanently </strong>without recovery options.",
+      "integration_erased": "<strong>This integration and all its settings will be deleted permanently </strong>without recovery options.",
+      "user_bin_empty": "<strong>All projects,theirs fuzzers, versions that are already in trash, </strong> and all related settings <strong> will be deleted permanently </strong>without recovery options.",
+      "project_bin_empty": "Fuzzers and versions of the current Project that are already in trash <strong>will be deleted permanently </strong>without recovery options.",
+      "fuzzer_cleanup_with_fuzzer": "This fuzzer and all its versions <strong> will be deleted permanently  </strong>without recovery options.",
+      "fuzzer_cleanup_without_fuzzer": "Fuzzer versions that were already in trash<strong>  will be deleted permanently </strong>without recovery options."
+    },
+    "content": {
+      "project_new_name": "Enter a new name for this Project to be restored with.",
+      "fuzzer_new_name": "Enter a new name for this Fuzzer to be restored with.",
+      "version_new_name": "Enter a new name for this Version to be restored with."
+    },
+    "placeholder": {
+      "project_new_name": "New project name",
+      "new_name": "New name"
+    }
+  },
+  "form": {
+    "label": {
+      "version": {
+        "cpu_usage": "CPU usage",
+        "ram_usage": "RAM usage",
+        "tmpfs_size": "tmpfs size",
+        "image": "Image",
+        "name": "Version name",
+        "description": "Description"
+      },
+      "fuzzer": {
+        "name": "Fuzzer name",
+        "description": "Description",
+        "language": "Language",
+        "engine": "Engine"
+      },
+      "project": {
+        "name": "Project name",
+        "description": "Description",
+        "node_count": "Nodes",
+        "node_cpu": "CPU usage",
+        "node_ram": "RAM usage",
+        "pool": "Pool"
+      },
+      "integration": {
+        "type": "Integration type",
+        "name": "Integration name",
+        "project_name": "Project",
+        "url": "Add a link",
+        "sign_in_bug_tracker": "Sign into bug tracker",
+        "issue_type": "Issue type",
+        "priority": "Priority",
+        "token": "Token"
+      },
+      "auth": {
+        "login": "Enter login",
+        "password": "Enter password"
+      },
+      "user": {
+        "login": "Login",
+        "display_name": "Display name",
+        "email": "Email address",
+        "current_password": "Current password",
+        "new_password_original": "New password",
+        "new_password_confirmation": "Confirm new password"
+      }
+    },
+    "hint": {
+      "fuzzer": {
+        "name": "Please enter Fuzzer name!",
+        "description": "Up to 160 characters",
+        "image": "Please choose image!"
+      },
+      "version": {
+        "upload_binaries": "Please upload binaries!",
+        "name": "Please enter Version name!",
+        "description": "Up to 160 characters",
+        "image": "Please choose image!",
+        "ram_total_limits_violated": "Sum of tmpfs and RAM resources shouldn't go beyond the range {{ramMin}}-{{ramMax}} MiB"
+      },
+      "project": {
+        "name": "Please enter Project name!",
+        "description": "Up to 160 characters",
+        "creation_disabled": "Upgrade your account to unlock this feature ",
+        "pool": "Please choose pool!"
+      },
+      "integration": {
+        "name": "Please enter Integration name!",
+        "project_name": "Please enter project name!",
+        "url": "Please add link!",
+        "username": "Please enter your username!",
+        "password": "Please enter your password!",
+        "issue_type": "Please choose issue type!",
+        "token": "Please enter token!"
+      },
+      "auth": {
+        "login": "Please enter your login!",
+        "password": "Please enter your password!"
+      },
+      "user": {
+        "password": "Please enter your password!",
+        "new_password_confirmation": "Please confirm your password!"
+      }
+    },
+    "placeholder": {
+      "fuzzer": {
+        "name": "Fuzzer name",
+        "description": "Add an optional description (max. 160 characters)"
+      },
+      "project": {
+        "name": "Project name",
+        "description": "Add an optional description (max. 160 characters)"
+      },
+      "integration": {
+        "url": "URL",
+        "username": "Login",
+        "password": "Password",
+        "issue_type": "Type",
+        "priority": "Priority",
+        "token": "Token"
+      },
+      "version": {
+        "description": "Add an optional description (max. 160 characters)",
+        "description_default": "First version of Fuzzer {{newFuzzerId}}"
+      },
+      "auth": {
+        "login": "Login",
+        "password": "Password"
+      },
+      "user": {
+        "login": "Login",
+        "email": "Email",
+        "current_password": "Current password",
+        "new_password_original": "New password",
+        "new_password_confirmation": "Confirm new password"
+      }
+    },
+    "button": {
+      "version": {
+        "upload_binaries": "Upload binaries (.tar.gz)",
+        "upload_config": "Upload options and environment (.json)",
+        "upload_seeds": "Upload seeds (.tar.gz)",
+        "version_create": "Create version",
+        "save_changes": "Save changes"
+      },
+      "fuzzer": {
+        "fuzzer_create": "Create fuzzer",
+        "save_changes": "Save changes"
+      },
+      "project": {
+        "project_create": "Create project",
+        "save_changes": "Save changes"
+      },
+      "integration": {
+        "integration_create": "Create integration",
+        "delete": "Delete integration",
+        "save_changes": "Save changes",
+        "select_type": {
+          "jira": "Jira",
+          "youtrack": "Youtrack",
+          "none": "None"
+        }
+      },
+      "auth": {
+        "log_in": "Log in"
+      },
+      "user": {
+        "toggle_password_reset": "Reset password",
+        "save_changes": "Save"
+      }
+    },
+    "title": {
+      "fuzzer_create": "Create new fuzzer",
+      "version_create": "Create new version",
+      "fuzzer_edit": "Modify fuzzer",
+      "version_edit": "Modify Version",
+      "log_in": "Log in",
+      "project_create": "Create new project",
+      "project_edit": "Modify project",
+      "user_settings": "Account settings",
+      "integration_create": "Create new integration",
+      "integration_edit": "Modify integration"
+    }
+  },
+  "projects": {
+    "tab_name": {
+      "project_settings": "Project",
+      "integration_settings": "Integration",
+      "projects_active": "Active",
+      "projects_deleted": "Deleted"
+    },
+    "button": {
+      "header_add_project": "+ Add a new project",
+      "header_add_fuzzer": "+ Add fuzzer",
+      "header_add_integration": "+ Add integration",
+      "create_project": "Create new project",
+      "create_fuzzer": "Create new fuzzer",
+      "add_integration": "+ Add integration",
+      "user_bin_empty": "Empty user bin",
+      "project_edit": "Edit",
+      "project_delete": "Delete",
+      "project_restore": "Restore",
+      "project_erase": "Delete",
+      "to_integrations": "Integrations",
+      "deselect_all": "Deselect all"
+    },
+    "column_title": {
+      "name_project": "Project",
+      "name_fuzzer": "Fuzzer",
+      "nodes": "Nodes",
+      "name_integration": "Integration",
+      "status": "Status",
+      "state": "State",
+      "coverage": "Coverage",
+      "cpu": "CPU",
+      "ram": "RAM",
+      "images": "Images",
+      "lang": "Language",
+      "engine": "Engine",
+      "selected_items": "Selected items:",
+      "type": "Type"
+    },
+    "data_availability_message": {
+      "no_projects_yet": "You don't have projects",
+      "no_deleted_projects_yet": "You don't have deleted projects",
+      "no_fuzzers_yet": "You don't have fuzzers",
+      "no_integrations_yet": "You don't have integrations"
+    },
+    "breadcrumb": {
+      "all_projects": "All projects",
+      "bin_projects": "Bin of projects",
+      "integrations": "Integrations"
+    },
+    "title": {
+      "all_projects": "All projects",
+      "bin_projects": "Bin of projects",
+      "project_not_found": "Project not found"
+    },
+    "descripton": {
+      "current_project": "Current project:",
+      "descripton": "Description:"
+    }
+  },
+  "navbar": {
+    "projects": "Projects",
+    "fuzzers": "Fuzzers",
+    "support": "FAQ",
+    "documentation": "Documentation",
+    "trash": "Trash",
+    "log_out": "Log out",
+    "settings": "Settings",
+    "sign_in": "Sign in"
+  },
+  "fuzzers": {
+    "data_availability_message": {
+      "no_fuzzers_yet": "You haven't loaded any fuzzers yet",
+      "fuzzer_not_found": "Fuzzer not found"
+    },
+    "button": {
+      "fuzzer_create": "Create new fuzzer",
+      "fuzzer_delete": "Delete fuzzer",
+      "fuzzer_edit": "Edit fuzzer",
+      "fuzzer_download": "Download",
+      "download_corpus": "Corpus",
+      "download_binaries": "Binaries",
+      "download_config": "Options",
+      "download_seeds": "Seeds",
+      "add_version": "+ Add version"
+    },
+    "filters": {
+      "label": {
+        "version_name": "Version name",
+        "date": "Date",
+        "reproduced_all": "All",
+        "reproduced_yes": "Reproduced",
+        "reproduced_no": "Not reproduced",
+        "archived_yes": "Archived",
+        "archived_no": "Actual"
+      },
+      "placeholder": {
+        "all_versions": "All versions",
+        "search_version": "Search by version name"
+      }
+    },
+    "active_version": "Active version:",
+    "description": "Description:",
+    "tab_error": {
+      "title": "Something went wrong",
+      "contact_support": "Please contact support at <1>{{supportEmail}}</1>"
+    },
+    "tab_name": {
+      "versions": "Versions",
+      "crashes": "Crashes",
+      "statistics": "Statistics"
+    },
+    "crashes_tab": {
+      "data_availability_message": {
+        "no_crashes_yet": "Fuzzer has no crashes yet"
+      },
+
+      "adjust_filter": "Please adjust filter",
+      "duplicates_one": "{{count}} duplicate",
+      "duplicates_other": "{{count}} duplicates",
+
+      "button": {
+        "crash_archive": "Archive",
+        "crash_unarchive": "Unarchive",
+        "crash_copy": "Copy",
+        "crash_download": "Download"
+      }
+    },
+    "statistics_tab": {
+      "data_availability_message": {
+        "no_statistics_yet": "There are no statistics yet"
+      },
+      "chart_name": {
+        "execs_done": "Execs done",
+        "execs_per_sec": "Execs per second",
+        "known_crashes": "Known crashes",
+        "unique_crashes": "Unique crashes"
+      },
+      "adjust_filter": "Please choose another version"
+    },
+    "versions_tab": {
+      "data_availability_message": {
+        "no_versions_yet": "Fuzzer does not have any versions yet"
+      },
+      "column_title": {
+        "name": "Name",
+        "status": "Status",
+        "state": "State",
+        "description": "Description",
+        "actions": "Actions",
+        "cpu": "CPU",
+        "ram": "RAM"
+      },
+      "button": {
+        "version_start_disabled_noBinaries": "Binaries were not uploaded.",
+        "version_start_disabled_fuzzerFailure": "The error is being processed. Try running it again.",
+        "fuzzer_start_disabled_noActiveVersion": "Fuzzer has no active version",
+        "version_restart_disabled_noBinaries": "Binaries were not uploaded.",
+        "version_restart_disabled_beforeVerification": "Restart is unavailable before verifcation.",
+        "fuzzer_restart_disabled_noActiveVersion": "Fuzzer has no active version",
+        "version_start": "Start",
+        "version_stop": "Stop",
+        "version_restart": "Restart",
+        "version_edit": "Edit",
+        "version_delete": "Delete"
+      },
+      "state": {
+        "Ok": "OK",
+        "Warning": "Warning",
+        "Error": "Error"
+      },
+      "status": {
+        "Unverified": "Unverified",
+        "Verifying": "Verifying",
+        "Running": "Running",
+        "Stopped": "Stopped",
+        "Interrupted": "Interrupted"
+      }
+    }
+  },
+  "sidebar": {
+    "current_project": {
+      "title": "Project: <strong>{{userProjectName}}</strong>",
+      "tooltip": "Go to projects page"
+    },
+    "button": {
+      "hide": "Hide",
+      "expand": "All filters",
+      "add_fuzzer": "Fuzzer",
+      "reset_filters": "Reset filters"
+    },
+    "label": {
+      "lang": "Language",
+      "engine": "Engine",
+      "ci_integration": "CI integration"
+    },
+    "column_title": {
+      "name": "Name",
+      "ci_integration": "CI integration",
+      "lang": "Lang",
+      "engine": "Engine"
+    },
+    "table_fuzzer_ci_integrated": "integrate",
+    "placeholder": {
+      "search_fuzzer": "Search by fuzzer name"
+    },
+    "data_availability_message": {
+      "no_deleted_fuzzers": "No deleted Fuzzers"
+    }
+  },
+  "error": {
+    "common": "Something went wrong",
+    "form_validation": {
+      "passwords_mismatch": "The two passwords that you entered do not match!"
+    },
+    "instruction": {
+      "relogin": "Please try to re-login to the app",
+      "choose_another_project": "Please choose another project"
+    },
+    "api_error": {
+      "E_INTERNAL_ERROR": "Internal error occurred. Please, try again later or contact support service",
+      "E_WRONG_REQUEST": "Wrong request parameters",
+
+      "E_AUTHORIZATION_REQUIRED": "Authorization required",
+      "E_SESSION_NOT_FOUND": "Session not found or expired",
+      "E_LOGIN_FAILED": "Login failed: Invalid username or password",
+      "E_ACCESS_DENIED": "Access denied.",
+      "E_ADMIN_REQUIRED": "Administrator rights required",
+      "E_SYSTEM_ADMIN_REQUIRED": "System administrator rights required",
+      "E_CLIENT_ACCOUNT_REQUIRED": "Please, use client account to manage data on this route",
+      "E_DEVICE_COOKIE_LOCKOUT": "Account locked out. Please, try again later",
+      "E_DEVICE_COOKIE_INVALID": "Provided device cookie is invalid",
+
+      "E_CSRF_TOKEN_MISSING": "Provided CSRF token is invalid or expired",
+      "E_CSRF_TOKEN_MISMATCH": "Provided CSRF token is invalid or expired",
+      "E_CSRF_TOKEN_INVALID": "Provided CSRF token is invalid or expired",
+      "E_CSRF_TOKEN_USER_MISMATCH": "Provided CSRF token is invalid or expired",
+      "E_USER_NOT_FOUND": "Requested user does not exist",
+      "E_USER_EXISTS": "User with this name already exists",
+      "E_USER_DELETED": "Unable to perform operation, because user is deleted",
+      "E_USER_NOT_DELETED": "Can't restore user that not deleted",
+      "E_ACCOUNT_NOT_CONFIRMED": "Account is not activated. Please, check your email/telephone for activation link",
+      "E_ACCOUNT_DISABLED": "Account is disabled. Please, contact support service to get more information",
+      "E_WRONG_PASSWORD": "Wrong password",
+
+      "E_PROJECT_NOT_FOUND": "Requested project does not exist",
+      "E_PROJECT_EXISTS": "Project with this name already exists",
+      "E_PROJECT_DELETED": "Unable to perform operation, because project is deleted",
+      "E_PROJECT_NOT_DELETED": "Can't restore project that not deleted",
+      "E_POOL_NOT_FOUND": "Resource pool not found",
+      "E_POOL_EXISTS": "Resource pool already exists",
+      "E_POOL_LOCKED": "Resource pool is being changed now. Please, try again later",
+      "E_DEFAULT_PROJECT_IMMUTABLE": "Default project can not be modified or deleted",
+      "E_PROJECT_DELETE_ERROR": "Unable to delete this project",
+      "E_CPU_RAM_MULTIPLICITY_BROKEN": "The amount of RAM should be a multiple of the number of processor cores",
+      "E_NODE_CPU_INVALID": "Invalid number of cpu cores to allocate for node",
+      "E_NODE_RAM_INVALID": "Invalid amount of memory to allocate for node",
+      "E_INVALID_MEM_PER_CORE": "Invalid ratio of provided cpu and ram",
+
+      "E_FUZZER_NOT_FOUND": "Requested fuzzer does not exist",
+      "E_FUZZER_EXISTS": "Fuzzer with this name already exists",
+      "E_FUZZER_DELETED": "Unable to perform operation, because fuzzer is deleted",
+      "E_FUZZER_NOT_DELETED": "Can't restore fuzzer that not deleted",
+      "E_FUZZER_LANG_MISMATCH": "Selected docker image has a programming language different from specified in request",
+      "E_FUZZER_ENGINE_MISMATCH": "Selected docker image has a fuzzer engine different from specified in request",
+      "E_ACTIVE_REVISION_NOT_FOUND": "Active version not selected",
+
+      "E_REVISION_NOT_FOUND": "Requested fuzzer version does not exist",
+      "E_REVISION_EXISTS": "Fuzzer version with this name already exists",
+      "E_REVISION_DELETED": "Unable to perform operation, because version is deleted",
+      "E_REVISION_NOT_DELETED": "Can't restore version that not deleted",
+      "E_REVISION_CAN_NOT_BE_CHANGED": "Specified type of data can't be changed in current state",
+      "E_REVISION_IS_NOT_RUNNING": "Version is not running",
+      "E_REVISION_CAN_ONLY_RESTART": "Version in this state can be only restarted",
+      "E_REVISION_ALREADY_RUNNING": "Version already running",
+      "E_MUST_UPLOAD_BINARIES": "You must upload at least binaries to run version",
+      "E_NO_POOL_TO_USE": "Current project doesn't have a resource pool. Please, create it to continue",
+      "E_CPU_USAGE_INVALID": "Invalid CPU usage specified for the version. Check it does not exceed pool limits",
+      "E_RAM_USAGE_INVALID": "Invalid RAM usage specified for the version. Check it does not exceed pool limits",
+      "E_TMPFS_SIZE_INVALID": "Invalid TmpFS size specified for the version. Check it does not exceed pool limits",
+      "E_TOTAL_RAM_USAGE_INVALID": "Sum of TmpFS size and RAM usage exceeds pool limits",
+      "E_SOURCE_REVISION_NOT_FOUND": "Source version not found",
+      "E_TARGET_REVISION_NOT_FOUND": "Destination version not found",
+      "E_CORPUS_OVERWRITE_FORBIDDEN": "Corpus files overwrite is forbidden, if target version has had any runs",
+      "E_NO_CORPUS_FOUND": "Corpus files were not found",
+      "E_COPY_SOURCE_TARGET_SAME": "Source and target version IDs are the same",
+
+      "E_IMAGE_NOT_FOUND": "Requested image does not exist",
+      "E_IMAGE_EXISTS": "Image with this name already exists",
+      "E_IMAGE_NOT_READY": "Specified image can't be used to run fuzzer",
+      "E_ENGINE_LANG_INCOMPATIBLE": "This fuzzer engine is not compatible with programming language specified",
+
+      "E_INTEGRATION_NOT_FOUND": "Requested integration does not exist",
+      "E_INTEGRATION_TYPE_MISMATCH": "Integration type in request body does not match the actual one",
+      "E_INTEGRATION_EXISTS": "Integration with this name already exists",
+
+      "E_CRASH_NOT_FOUND": "Requested crash does not exist",
+      "E_STATISTICS_NOT_FOUND": "Requested statistics record does not exist",
+
+      "E_UPLOAD_FAILURE": "Failed to upload file. Re-upload required",
+      "E_FILE_NOT_FOUND": "Requested file does not exist",
+      "E_FILE_TOO_LARGE": "Provided file is too large. Please, fit into upload limit",
+      "E_FILE_NOT_ARCHIVE": "Provided file is not recognized as archive. Please, ensure you're uploading '.tar.gz' file",
+      "E_JSON_FILE_IS_INVALID": "Provided file is not recognized as json. Please, ensure you're uploading valid '.json' file"
+    },
+    "scheduler_error": {
+      "E_SUCCESS": "Success",
+      "E_INTERNAL_ERROR": "Internal error occurred. Please, contact administrator.",
+      "E_AGENT_ERROR": "Agent error",
+      "E_NOT_ENOUGH_RESOURCES": "Not enough resources in cluster to run fuzzer!",
+      "E_NORMAL_WEIGHT": "Fuzzer performance is ok",
+      "E_LOW_WEIGHT": "Warning: Fuzzer performance is low!",
+      "E_ZERO_WEIGHT": "Fuzzer stopped due to very low performance!"
+    },
+    "agent_error": {
+      "E_SUCCESS": "Success",
+      "E_INTERNAL_ERROR": "Internal error",
+
+      "E_CONFIG_INVALID": "Fuzzer configuration is invalid",
+      "E_FUZZER_ABORTED": "Fuzzer aborted",
+      "E_FUZZER_LAUNCH_ERROR": "Fuzzer error",
+
+      "E_RAM_LIMIT_EXCEEDED": "Ram limit exceeded",
+      "E_TMPFS_LIMIT_EXCEEDED": "No space left on tmpfs"
+    },
+
+    "internal_server_error": "Something went wrong. Please contact support."
+  },
+  "notification": {
+    "button": {
+      "cancel": "Cancel"
+    },
+    "message": {
+      "fuzzer_deleted": "Fuzzer sent to trash",
+      "fuzzer_erased": "Fuzzer is being deleted",
+      "version_deleted": "Version sent to trash",
+      "version_erased": "Version is being deleted",
+      "integration_deleted": "Integration deleted",
+      "project_deleted": "Project sent to trash",
+      "project_erased": "Project is being deleted",
+      "project_restored": "Project is being restored",
+      "user_bin_empty": "User bin is being emptied",
+      "fuzzer_restored": "Fuzzer is being restored",
+      "version_restored": "Version is being restored",
+      "fuzzer_cleanup": "Fuzzer is being cleaned",
+      "project_bin_empty": "Project bin is being emptied",
+      "error": "Something went wrong"
+    },
+    "description": {
+      "fuzzer_deleted": "Fuzzer will be stored in the trash for 30 days",
+      "fuzzer_erased": "Fuzzer will be permanently deleted",
+      "version_deleted": "Version will be stored in the trash for 30 days",
+      "version_erased": "Version will be permanently deleted",
+      "integration_deleted": "Project integration was deleted",
+      "project_deleted": "Project will be stored in the trash for 30 days",
+      "project_erased": "Project will be permanently deleted",
+      "project_restored": "Project was restored from trash",
+      "user_bin_empty": "All projects from trash and their content will be permanently deleted.",
+      "fuzzer_restored": "Fuzzer was restored from trash",
+      "version_restored": "Version was restored from trash",
+      "fuzzer_cleanup": "Fuzzer is being cleaned",
+      "project_bin_empty": "All fuzzers and versions from this project's bin will be permanently deleted."
+    }
+  },
+  "general": {
+    "navigation_button": {
+      "registration": "Register",
+      "back_to_previous_page": "Go to previous page",
+      "back_to_support": "Back to Support",
+      "go_to_main_page": "Go to the main page",
+      "go_to_projects": "Go to projects page",
+      "go_to_bin_projects": "Bin of projects"
+    },
+    "alert": {
+      "project_creation_disabled": "Upgrade your account to unlock new features. Please contact support at <1>{{supportEmail}}</1> for details."
+    },
+    "date_picker": {
+      "today": "Today",
+      "last_week": "Last week",
+      "last_month": "Last month"
+    }
+  },
+  "support": {
+    "button": {
+      "ask_or_report": "Ask a question or report a bug",
+      "ask_again": "Ask a question again",
+      "send": "Send"
+    },
+    "title": {
+      "ask_or_report": "Ask a question or report a bug"
+    },
+    "placeholder": {
+      "request_type_select": "Select topic",
+      "message_text": "Message text..."
+    },
+    "request_type": {
+      "request": "Send request",
+      "question": "Ask question",
+      "problem": "Report problem"
+    },
+    "response_message": {
+      "gratitude": "Thank you for your request!",
+      "promise_to_reply": "We will reply to your email soon."
+    }
+  },
+  "trash": {
+    "button": {
+      "version_restore": "Restore",
+      "version_erase": "Delete",
+      "fuzzer_restore": "Restore fuzzer",
+      "fuzzer_cleanup": "Delete",
+      "project_bin_empty": "Empty project bin"
+    },
+    "data_availability_message": {
+      "no_deleted_versions": "No deleted versions"
+    },
+    "placeholder": {
+      "search_version": "Search by version name"
+    }
+  },
+  "not_found": {
+    "title": {
+      "page_not_found": "Page not found"
+    }
+  },
+  "app_error": {
+    "title": {
+      "error": "Something went wrong. Please refresh the page"
+    },
+    "button": {
+      "refresh_page": "Refresh page"
+    }
+  }
+}

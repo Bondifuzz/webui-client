@@ -1,0 +1,44 @@
+.tabContainer {
+  min-width: 1100px;
+  background-color: white;
+  padding: 24px;
+  border: 1px solid var(--link-pale-grey);
+}
+
+.tabContainerEmpty {
+  padding: 48px;
+  /* margin-top: 24px; */
+  background-color: white;
+  border: 1px solid var(--link-pale-grey);
+}
+
+.tabContentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+}
+.filters > div {
+  width: 230px;
+}
+
+.CrashActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ExpandedContainer {
+  text-align: left;
+  position: relative;
+}
+
+.ExpandedContent {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-right: 30px;
+}

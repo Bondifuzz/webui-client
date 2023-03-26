@@ -1,0 +1,21 @@
+.ContentContainer {
+  background-color: transparent;
+  width: 800px;
+  margin: 80px auto 0;
+  text-align: left;
+}
+
+.ContentContainerApply {
+  background-color: transparent;
+  width: 800px;
+  margin: 80px auto 0;
+}
+
+.ContentHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  text-align: right;
+}

@@ -1,0 +1,51 @@
+.layout {
+  background-color: white;
+  margin-left: 25vw;
+  margin-top: var(--navbar-height);
+}
+
+.fuzzerHeader {
+  background-color: white;
+  text-align: left;
+  font-size: large;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 24px;
+  min-height: 122px;
+}
+.fuzzerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+.fuzzerActions {
+  display: flex;
+  min-width: 150px;
+  max-width: 600px;
+  justify-content: space-between;
+}
+.PanelContainer {
+  height: 56px;
+}
+
+.PanelContainerActive {
+  background-color: var(--button-default-background-color);
+  height: 56px;
+}
+
+.pageContainer {
+  overflow: auto;
+  height: 72vh;
+  margin: 24px;
+}
+
+.inputContainer {
+  width: 520px;
+  margin-left: 0;
+}
+
+.formContainer {
+  text-align: left;
+}

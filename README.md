@@ -1,2 +1,3 @@
-# webui-client
-Web-ui for BondiFuzz platform
+# WebUI-client
+
+This service is a part of [BondiFuzz](https://github.com/bondifuzz)

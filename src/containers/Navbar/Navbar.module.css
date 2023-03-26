@@ -1,0 +1,24 @@
+.NavContainer {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--navbar-bckgd);
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  height: var(--navbar-height);
+}
+
+.NavMenu {
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  background-color: transparent;
+  color: white;
+}
+
+.NavItem {
+  justify-content: center;
+  width: auto !important;
+  z-index: 1;
+}

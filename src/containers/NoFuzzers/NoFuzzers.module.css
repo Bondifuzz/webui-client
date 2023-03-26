@@ -1,0 +1,21 @@
+.pageContainer {
+  display: flex;
+  background-color: white;
+  margin: 220px auto 0;
+}
+
+.description {
+  margin: 150px 20px;
+}
+
+.title {
+  font: var(--font-30-38);
+  width: 320px;
+  display: block;
+  padding: 40px 0;
+  text-align: left;
+}
+
+.button {
+  width: 320px;
+}

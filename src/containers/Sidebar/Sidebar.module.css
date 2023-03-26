@@ -1,0 +1,62 @@
+.container {
+  background-color: var(--sidebar-bckgd);
+  height: 100vh;
+  position: fixed;
+  padding-top: 50px;
+  z-index: 5;
+}
+
+.pageTitle span {
+  color: white;
+}
+
+.TableContainer {
+  margin: var(--marg-side-24);
+}
+
+.TableContainer tr:hover > td {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.TableContainerExpanded table {
+  background-color: var(--sidebar-bckgd-dark);
+}
+
+.TableContainer tr th {
+  background-color: transparent !important;
+  color: var(--form-insides-grey);
+  border: none;
+  box-shadow: none;
+}
+
+.TableContainer tr td {
+  border: none;
+  /* for sorted column no to have ant color */
+  background-color: transparent;
+}
+
+.TableRowActive {
+  background-color: var(--button-primary-background-color);
+}
+
+.FuzzerWithError {
+  color: var(--dustRed);
+}
+
+.inputContainer span {
+  background-color: var(--sidebar-bckgd-dark) !important;
+  border: none;
+  color: var(--form-insides-grey);
+}
+
+.inputContainer span > input {
+  color: var(--form-insides-grey);
+}
+
+.selectItem:hover {
+  background-color: var(--sidebar-bckgd);
+}
+
+.selectItem div {
+  color: white;
+}

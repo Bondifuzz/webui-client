@@ -1,6 +1,7 @@
 import { Col, Form, InputNumber, Slider } from "antd";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ramMin, tmpfsMin, tmpfsMax } from "../../../config/constants";
 
 const { Item } = Form;
 
@@ -17,10 +18,8 @@ const SliderInputDependent = ({
   const dataTmpfs = {
     title: t("form.label.version.tmpfs_size"),
     initial: 200,
-    // min: 100,
-    // max: 2000,
-    min: limitsAll?.tmpfs?.min_value,
-    max: limitsAll?.tmpfs?.max_value,
+    min: tmpfsMin,
+    max: tmpfsMax,
     step: 50,
     measurments: "MiB",
     label: "tmpfs_size",
@@ -61,9 +60,9 @@ const SliderInputDependent = ({
           // formatter={(e) => `${e} ${measurments}`}
           // parser={(e) => e.replace(` ${measurments}`, "")}
           //min={min}
-          min={Math.max(min, limitsAll?.ram_total?.min_value - selectedRAM)}
+          min={Math.max(min, ramMin - selectedRAM)}
           //max={max}
-          max={Math.min(max, limitsAll?.ram_total?.max_value - selectedRAM)}
+          max={Math.min(max, limitsAll?.ram_total - selectedRAM)}
           step={step}
           value={inputValue}
           onChange={handleInput}

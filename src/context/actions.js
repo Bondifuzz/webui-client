@@ -55,7 +55,7 @@ function wrapper(fn) {
     }
 
     if (rsp?.body) {
-      throw rsp.body;
+      throw rsp.body.error;
     } else if (rsp?.error) {
       return message.error(t("error.internal_server_error"));
     }
@@ -438,9 +438,11 @@ export const setFconfs = wrapper(async (dispatch) => {
 export const getFuzzerLimits = wrapper(async (userDetails) => {
   try {
     const apiCall = new ProjectsApi(apiClient);
+    const apiCallPool = new PoolsApi(apiClient);
     const { userId, userProjectId } = userDetails;
     let resp = await apiCall.getProject(userId, userProjectId);
-    return resp.pool.fuzzer_limits;
+    let pool = await apiCallPool.getPool(userId, resp.pool_id );
+    return pool.resources;
   } catch (error) {
     return error;
   }

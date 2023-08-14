@@ -25,6 +25,7 @@ import {
   useAuthState,
   useFuzzers,
 } from "../../context";
+import { ramMin, cpuMin } from "../../config/constants";
 import { formsErrorReducer } from "../../context/reducer";
 import generateNameByDate from "../../utilities/generateNameByDate";
 import getFormFieldTypeByError from "../../utilities/getFormFieldTypeByError";
@@ -36,6 +37,7 @@ const initialStateError = {
   wording: "",
   common: "",
 };
+
 
 const CreateFuzzerWithVersion = ({ action }) => {
   const [form] = Form.useForm();
@@ -69,8 +71,8 @@ const CreateFuzzerWithVersion = ({ action }) => {
     try {
       dispatchFormsErrors({ type: "RESET" });
       if (
-        inputValueTmpfs <= limits?.ram_total.max_value - inputValueRAM &&
-        inputValueTmpfs >= limits?.ram_total.min_value - inputValueRAM
+        inputValueTmpfs <= limits?.ram_total - inputValueRAM &&
+        inputValueTmpfs >= ramMin - inputValueRAM
       ) {
         const fuzzerPropsForm = (({ name, description, lang, engine }) => ({
           name,
@@ -144,8 +146,8 @@ const CreateFuzzerWithVersion = ({ action }) => {
           type: "SET_COMMON",
           payload: {
             common: t("form.hint.version.ram_total_limits_violated", {
-              ramMin: limits?.ram_total.min_value,
-              ramMax: limits?.ram_total.max_value,
+              ramMin: ramMin,
+              ramMax: limits?.ram_total,
             }),
           },
         });
@@ -358,7 +360,7 @@ const CreateFuzzerWithVersion = ({ action }) => {
           <SliderInput
             setValue={setCPU}
             type="CPU"
-            limits={limits?.cpu}
+            limits={ {min_value: cpuMin, max_value: limits?.cpu_total}}
             {...(formsErrors.fieldName === "cpu" && {
               validateStatus: "error",
               help: formsErrors.wording,
@@ -367,7 +369,7 @@ const CreateFuzzerWithVersion = ({ action }) => {
           <SliderInput
             setValue={setRAM}
             type="RAM"
-            limits={limits?.ram}
+            limits={{min_value: ramMin, max_value: limits?.ram_total}}
             {...(formsErrors.fieldName === "ram" && {
               validateStatus: "error",
               help: formsErrors.wording,
